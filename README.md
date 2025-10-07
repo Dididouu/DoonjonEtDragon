@@ -1,32 +1,20 @@
 # DOOnjon&Dragon Project
 
-On souhaite développer une application pour **un nouveau un jeu D&D**.
-C'est un jeu de rôle de Medieval Fantasy où les joueurs incarnent des personnages affrontant des monstres dans plusieurs donjons successifs.
+#### Projet de fin d'année de BUT1 - Développement orienté objet en Java
 
-## Organisation
 
-- Travail en **binôme** au sein d'un même groupe de TP
-- Le travail doit être réalisé sur un fork du projet dans le groupe <nom_etudiant_1>-<nom_etudiant_2> que vous aurez créé
-- Durée : 5 semaines
-- Nombre de séances :
-   - 8h encadrées en groupe de TD
-   - 12h encadrées, en groupe TP
-   - 10h tutorées, en promo complète
-   - travail non-encadré (SAé libre)
-- Sujet dévoilé en deux phases :
-  - Phase 1 dévoilée **Lundi 5 mai** sur les deux premières semaines
-  - Phase 2 dévoilée le **Lundi 19 mai**
+![Volet principal d'affichage des missions.](/assets/images/Accueil.png)
 
-## Calendrier
 
-- Lundi **5 mai** : début du projet
-- Dimanche **18 mai** : rendu intermédiaire
-- Lundi 19 mai : début de la phase 2
-- Dimanche **8 Juin** à minuit : rendu final
-- De Mercredi **11** à Vendredi **13 juin** : soutenances
+## Exécution
 
-De plus, il y aura un rendu hebdomadaire avant chaque **dimanche, minuit**.
-
+Nécessite le JRE et JDK (développé avec Java **21**)
+Procédure identique peu importe le système d'exploitation :
+```console
+  cd src                    // Accéder au dossier source
+  javac Main.java           // Compiler le programme
+  java Main                 // Exécuter le programme
+```
 
 
 ## Le jeu
@@ -165,7 +153,6 @@ Au début de chaque donjon, le maître du jeu
 - positionne des équipements sur la carte que les joueurs pourront récupérer
 - présente en quelques phrases le contexte aux joueurs
 
-Afin de faciliter la tâche au maître du jeu, un choix de mise en place du donjon par défaut devra être proposé pour chaque donjon.
 
 Chaque joueur et chaque monstre lance 1d20 et ajoute leur caractéristique d'initiative. Ils joueront par ordre décroissant du résultat d'initiative.
 
@@ -182,11 +169,9 @@ A la fin de chaque action le joueur ou le maître du jeu peut commenter l'action
 ##### S'équiper *(uniquement pour les personnages)*
 Un joueur peut équiper une arme ou une armure de son inventaire.
 (L'arme ou l'armure précédemment équipée retourne dans l'inventaire)
-Ne pas oublier de prendre alors en compte l'éventuel modificateur de vitesse dû à l'arme de guerre ou l'armure lourde lors des futurs déplacements du personnage.
 
 ##### Se Déplacer
 Un joueur ou un monstre peut de déplacer d'une distance égale à sa caractéristique de vitesse divisée par 3 sur une case sans monstre, joueur ou obstacle.
-L'évitement d'obstacles n'est pas pris en compte pour le calcul de la distance de déplacement.
 
 ##### Attaquer
 L'attaquant attaque avec l'arme  qu'il porte.
@@ -202,7 +187,7 @@ Un donjon se termine lorsqu'un joueur est tué (défaite) ou lorsque tous les mo
 
 En cas de victoire, les personnages regagnent l'intégralité de leur vie et passent au donjon suivant.
 
-### Exemple d'interactionUtilisateur
+### Exemple d'interaction Utilisateur
 
 ```console
 ********************************************************************************
@@ -271,60 +256,7 @@ Caelynn il vous reste 2 actions que souhaitez vous faire ?
   Il lui reste 22 PV.
 ```
 
-Il n'est pas nécessaire de reproduire le visuel tel quel mais toutes les informations doivent être présentes.
 
 ### Fin du jeu
 
 À la fin du jeu, un écran affiche "Vous avez perdu" ou "Vous avez gagné" et indique la cause de la défaite ou de la victoire.
-## Rendus hebdomadaires
-
-Votre projet doit être un fork de ce dépôt dans un groupe ayant pour nom `<nom_etudiant_1>-<nom_etudiant_2>`.
-Votre enseignant en TP et le responsable du module doivent être ajoutés comme Reporter à votre projet.
-
-Vous devez effectuer un rendu par semaine au plus tard le dimanche soir à minuit : la régularité des rendus sera prise en compte dans l'évaluation.
-Un rendu est une branche qui a pour nom `rendu<numéro-rendu>`.
-Le dernier rendu sera évalué en tant que rendu final.
-
-Chaque rendu doit contenir :
-
-- un programme qui compile dont les sources sont dans le répertoire `src/`,
-- un diagramme de classes à jour placé dans le répertoire `uml/` ayant pour nom `semaine<numero>.puml`,
-
-La structure du dépôt git doit être la suivante :
-```bash
-.
-├── README.md
-├── .gitignore
-├── src/
-    ├── Main.java
-    ├── ...
-├── uml/
-    ├── semaine1.puml
-    ├──...
-```
-
-## Rendus évalués
-
-#### 1er rendu : 18 mai
-
-Seront évalués :
-
-- Diagramme de classes complet de la phase 1
-  - respect des conventions UML
-- Code
-  - cohérence avec l'UML
-
-## Quelques consignes
-
-Veillez :
-
-- à respecter les [P21 Guidelines](https://git.unistra.fr/p21/p21/-/blob/main/guidelines.pdf?ref_type=heads)
-- à la bonne conception du code : il doit être lisible et facile à corriger, à réutiliser, à modifier et à étendre.
-
-## Quelques conseils
-
-- N'essayez pas d'implémenter toutes les fonctionnalités en une seule fois. Commencez par un programme simple mais fonctionnel et intégrez progressivement les fonctionnalités.
-- Il s'agit d'une version très simplifiée de Donjon et Dragon. Il peut être tentant d'améliorer le projet et d'intégrer beaucoup de fonctionnalités et règles du jeu originel. Cependant cela ne vous permettra pas d'augmenter votre note. Ne négligez pas le projet de base ni les projets des autres modules. Vous aurez tout le loisir d'améliorer le projet durant votre été.
-- Faites des commits réguliers sur vos branches de travail.
-- Concevez votre code de façon à ce qu'il soit facile à modifier et à étendre avec de nouvelles fonctionnalités, notamment en prévision de la phase 2.
-- La qualité de la conception et du code produit est plus importante que le nombre de fonctionnalités intégrées.
