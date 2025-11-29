@@ -52,7 +52,7 @@ Le jeu se termine lorsque **les joueurs meurent** ou **après la victoire sur 3 
 Nécessite le JRE et JDK (développé avec Java **21**)
 Procédure identique peu importe le système d'exploitation :
 ```console
-  git clone https://github.com/Mcolerique/DOOjon-et-dragons.git // Cloner le projet
+  git clone https://github.com/Dididouu/DoonjonEtDragon.git // Cloner le projet
   cd Doojon-et-dragons/src  // Accéder au dossier source
   javac Main.java           // Compiler le programme
   java Main                 // Exécuter le programme
